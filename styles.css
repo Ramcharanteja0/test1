@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Fill the entire viewport height */
+    overflow: hidden; /* Prevent scrolling */
+    position: relative; /* Positioning context for absolute elements */
+}
+
+.container {
+    position: absolute; /* Position the container absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    z-index: 1; /* Ensure the container is above the image */
+    color: white; /* Optional: Set text color */
+}
+
+.anime-character img {
+    position: absolute; /* Position the image absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    transform: translate(-50%, -50%); /* Center the image */
+    z-index: 0; /* Ensure the image is behind the container */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 2; /* Ensure the button is above the image */
+}
